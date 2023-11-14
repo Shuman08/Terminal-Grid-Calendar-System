@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="edu.curtin.terminalgrid.TerminalGridTest" tests="18" skipped="0" failures="0" errors="0" timestamp="2023-10-25T15:47:43" hostname="LIMSHUMAN-GAMIN" time="0.387">
+  <properties/>
+  <testcase name="test2x2()" classname="edu.curtin.terminalgrid.TerminalGridTest" time="0.092"/>
+  <testcase name="[1] 0" classname="edu.curtin.terminalgrid.TerminalGridTest" time="0.093"/>
+  <testcase name="[2] 1" classname="edu.curtin.terminalgrid.TerminalGridTest" time="0.004"/>
+  <testcase name="[3] 12" classname="edu.curtin.terminalgrid.TerminalGridTest" time="0.019"/>
+  <testcase name="[4] 13" classname="edu.curtin.terminalgrid.TerminalGridTest" time="0.003"/>
+  <testcase name="test2x1UnevenMultiline()" classname="edu.curtin.terminalgrid.TerminalGridTest" time="0.018"/>
+  <testcase name="test1x2Wrapped1stCol()" classname="edu.curtin.terminalgrid.TerminalGridTest" time="0.002"/>
+  <testcase name="test1x2Wrapped2ndCol()" classname="edu.curtin.terminalgrid.TerminalGridTest" time="0.002"/>
+  <testcase name="test1x2UnevenMultiline()" classname="edu.curtin.terminalgrid.TerminalGridTest" time="0.002"/>
+  <testcase name="test2x3WrappedAllCols()" classname="edu.curtin.terminalgrid.TerminalGridTest" time="0.002"/>
+  <testcase name="test1x1Empty()" classname="edu.curtin.terminalgrid.TerminalGridTest" time="0.012"/>
+  <testcase name="test1x1Wrapped()" classname="edu.curtin.terminalgrid.TerminalGridTest" time="0.002"/>
+  <testcase name="test2x2NestedLists()" classname="edu.curtin.terminalgrid.TerminalGridTest" time="0.001"/>
+  <testcase name="test2x3Headings()" classname="edu.curtin.terminalgrid.TerminalGridTest" time="0.022"/>
+  <testcase name="test1x2Multiline()" classname="edu.curtin.terminalgrid.TerminalGridTest" time="0.008"/>
+  <testcase name="test1x2WrappedAllCols()" classname="edu.curtin.terminalgrid.TerminalGridTest" time="0.002"/>
+  <testcase name="test2x1Multiline()" classname="edu.curtin.terminalgrid.TerminalGridTest" time="0.002"/>
+  <testcase name="test2x2NestedListsHeadings()" classname="edu.curtin.terminalgrid.TerminalGridTest" time="0.013"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

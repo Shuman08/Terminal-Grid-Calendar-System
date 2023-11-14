@@ -1,0 +1,46 @@
+event 2023-01-01 all-day "New Year's Day"
+event 2023-12-25 all-day "Christmas Day"
+event 2023-07-04 all-day "Independence Day"
+event 2023-10-31 all-day "Halloween"
+event 2023-11-11 all-day "Veterans Day"
+event 2023-02-14 all-day "Valentine's Day"
+event 2023-03-17 all-day "St. Patrick's Day"
+event 2023-10-19 09:00:00 60 "Meeting 1 2 3"
+event 2023-10-20 10:00:00 180 "Meeting 3 3 3"
+
+plugin edu.curtin.calplugins.Repeat {
+    title: "Weekly Meeting",
+    startDate: "2023-10-25",
+    startTime: "17:30:00",
+    duration: "60",
+    repeatDuration: "3",
+    repeat: "7",
+}
+
+plugin edu.curtin.calplugins.Repeat {
+    title: "Meeting 2",
+    startDate: "2023-10-25",
+    startTime: "",
+    duration: "0",
+    repeatDuration: "3",
+    repeat: "7",
+}
+
+plugin edu.curtin.calplugins.Notify {
+    text: "Meeting"
+}
+
+script "
+# I'm a Python script!
+print('hello world')
+def create_event(title, date, time, duration):
+    # Logic to create a new event
+    event = {
+        "title": title,
+        "date": date,
+        "time": time,
+        "duration": duration
+    }
+    # Save the event or perform further actions
+    return event
+"

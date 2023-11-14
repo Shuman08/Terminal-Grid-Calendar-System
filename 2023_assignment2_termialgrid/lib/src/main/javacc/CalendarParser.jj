@@ -1,0 +1,45 @@
+options {
+  STATIC = false;
+}
+
+PARSER_BEGIN(CalendarParser)
+import java.util.*;
+public class CalendarParser {
+  public static void main(String[] args) throws ParseException {
+    CalendarParser parser = new CalendarParser(System.in);
+    parser.Start();
+  }
+}
+PARSER_END(CalendarParser)
+
+TOKEN : {
+  <DATE: (["0"-"9"])+ "-" (["0"-"9"])+ "-" (["0"-"9"])+ >
+| <TIME: (["0"-"9"])+ ":" (["0"-"9"])+ ":" (["0"-"9"])+ >
+| <INTEGER: (["0"-"9"])+ >
+| <STRING: "\"" ( (~["\"", "\n", "\r"]) | ("\\\"" | "\\\n" | ~["\"", "\n", "\r"])* ) "\"">
+}
+
+void Start() : {}
+{
+  ( EventDeclaration() | PluginDeclaration() | ScriptDeclaration() )*
+}
+
+void EventDeclaration() : {}
+{
+  "event" <DATE> ( <TIME> <INTEGER> | "all-day" ) <STRING>
+}
+
+void PluginDeclaration() : {}
+{
+  "plugin" <STRING> "{" ( Argument() ( "," Argument() )* )? "}"
+}
+
+void Argument() : {}
+{
+  <STRING> ":" <STRING>
+}
+
+void ScriptDeclaration() : {}
+{
+  "script" <STRING>
+}

@@ -1,0 +1,47 @@
+活动 2023-01-01 全天 "元旦"
+活动 2023-12-25 全天 "圣诞节"
+活动 2023-07-04 全天 "独立日"
+活动 2023-10-31 全天 "万圣节"
+活动 2023-11-11 全天 "退伍军人节"
+活动 2023-02-14 全天 "情人节"
+活动 2023-03-17 全天 "圣帕特里克节"
+活动 2023-10-19 09:00:00 60 "会议 1 2 3"
+活动 2023-10-20 10:00:00 180 "会议 3 3 3"
+
+插件 edu.curtin.calplugins.Repeat {
+    标题: "每周会议",
+    开始日期: "2023-10-23",
+    开始时间: "09:00:00",
+    持续时间: "60",
+    重复持续时间: "3",
+    重复: "7",
+}
+
+插件 edu.curtin.calplugins.Repeat {
+    标题: "会议 2",
+    开始日期: "2023-10-25",
+    开始时间: "",
+    持续时间: "0",
+    重复持续时间: "3",
+    重复: "7",
+}
+
+插件 edu.curtin.calplugins.Notify {
+    文字: "会议"
+}
+
+脚本 "
+# coding: utf8
+# 我是一个Python脚本！
+print('hello world')
+def create_event(title, date, time, duration):
+    # Logic to create a new event
+    event = {
+        "title": title,
+        "date": date,
+        "time": time,
+        "duration": duration
+    }
+    # Save the event or perform further actions
+    return event
+"

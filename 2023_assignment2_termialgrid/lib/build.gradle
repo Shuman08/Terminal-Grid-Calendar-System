@@ -1,0 +1,46 @@
+plugins {
+    id 'java-library'
+    id 'pmd'
+    id "org.javacc.javacc" version "3.0.0"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.fusesource.jansi:jansi:2.4.0'
+    implementation 'org.apache.commons:commons-text:1.10.0'
+    implementation 'org.python:jython-standalone:2.7.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.2'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+}
+
+compileJava {
+    options.compilerArgs << '-Xlint:all,-serial'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+    testLogging.showStandardStreams = true
+}
+
+pmd {
+    consoleOutput = true
+    toolVersion = '6.55.0'
+    rulesMinimumPriority = 5
+    ruleSets = []
+    ruleSetFiles = files('saed-pmd-rules.xml')
+}
+
+compileJavacc {
+    inputDirectory = file('src/main/javacc')
+    outputDirectory = file("build/generated/javacc")
+}
+
+sourceSets {
+    main {
+        java.srcDirs += 'lib/build/generated/javacc'
+    }
+}
