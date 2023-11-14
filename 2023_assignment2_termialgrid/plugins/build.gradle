@@ -1,0 +1,16 @@
+plugins {
+    id 'java-library'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+   implementation project(':lib')
+   implementation project(':api')
+}
+
+compileJava {
+    options.compilerArgs << '-Xlint:all,-serial'
+}

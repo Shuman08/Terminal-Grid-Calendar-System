@@ -1,0 +1,2 @@
+rootProject.name = 'terminalgrid'
+include ':lib', ':demo' , ':plugins', ":api"
